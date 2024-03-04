@@ -1,0 +1,18 @@
+<form>
+    <div class="form-group">
+      <label>Operando A</label>
+      <input type="number" class="form-control" placeholder="Escreve operador A" [(ngModel)]="operandoA"
+        name="operandoA" />
+    </div>
+    <div class="form-group">
+      <label>Operando B</label>
+      <input type="number" class="form-control" placeholder="Escreve operador B" [(ngModel)]="operandoB"
+        name="operandoB" />
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary" (click)="soma()">Somar</button>
+      <button type="submit" class="btn btn-primary" (click)="subtrair()">Subtrair</button>
+      <button type="submit" class="btn btn-primary" (click)="multiplicar()">Multiplicar</button>
+      <button type="submit" class="btn btn-primary" (click)="dividir()">Dividir</button>
+    </div>
+  </form>

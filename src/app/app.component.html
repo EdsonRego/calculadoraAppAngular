@@ -1,17 +1,11 @@
 <div class="container">
   <h1>{{titulo}}</h1>
-  <form>
-    <div class="form-group">
-      <label>Operando A</label>
-      <input type="number" class="form-control" placeholder="Escreve operador A" [(ngModel)]="operandoA"
-        name="operandoA" />
-    </div>
-    <div class="form-group">
-      <label>Operando B</label>
-      <input type="number" class="form-control" placeholder="Escreve operador B" [(ngModel)]="operandoB"
-        name="operandoB" />
-    </div>
-    <button type="submit" class="btn btn-primary" (click)="soma()">Somar</button>
-  </form>
-  <p>Resultado: {{resultado}}</p>
+
+
+  <app-formulario (resultadoSoma)="processarResultado($event)" (resultadoSubtrair)="processarResultado($event)"
+    (resultadoMultiplicar)="processarResultado($event)" (resultadoDividir)="processarResultado($event)">
+  </app-formulario>
+
+  <app-resultado [resultadoFilho]="resultadoPai">
+  </app-resultado>
 </div>
